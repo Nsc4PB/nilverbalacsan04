@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Hobbies Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url('pag11.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      text-shadow:
+        -1px -1px 2px #000,
+         1px -1px 2px #000,
+        -1px  1px 2px #000,
+         1px  1px 2px #000;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid rgba(255, 255, 255, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: white;
+      text-decoration: none;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      padding: 10px 20px;
+      border-radius: 5px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all 0.3s ease;
+    }
+
+    .back:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Hobbies Gallery</h1>
+  <div class="gallery">
+    <img src="page2.jpg" alt="Hobby Photo 1">
+    <img src="page3.jpg" alt="Hobby Photo 2">
+    <img src="page4.jpg" alt="Hobby Photo 3">
+    <img src="page5.jpg" alt="Hobby Photo 4">
+    <img src="page6.jpg" alt="Hobby Photo 5">
+    <img src="page7.jpg" alt="Hobby Photo 6">
+    <img src="page8.jpg" alt="Hobby Photo 7">
+    <img src="page9.jpg" alt="Hobby Photo 8">
+    <img src="page10.jpg" alt="Hobby Photo 9">
+    <img src="page11.jpg" alt="Hobby Photo 10">
+    <img src="page12.jpg" alt="Hobby Photo 11">
+    <img src="page13.jpg" alt="Hobby Photo 12">
+  </div>
+  <a href="index.html" class="back">← Back to Home</a>
+</body>
+</html>
