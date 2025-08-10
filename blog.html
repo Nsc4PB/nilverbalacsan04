@@ -40,7 +40,7 @@
       margin: 0 auto;
     }
 
-    /* Picture animations */
+    /* Animations */
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -51,7 +51,7 @@
       50% { transform: translateY(-10px); }
     }
 
-    /* Dark pink burning flame effect (extended outward) */
+    /* Dark pink burning glow animation */
     @keyframes burnGlow {
       0% {
         box-shadow:
@@ -76,13 +76,22 @@
       }
     }
 
-    .gallery img {
+    /* Wrapper for glow so it doesn't cover image */
+    .image-wrapper {
+      display: inline-block;
+      border-radius: 10px;
+      padding: 5px; /* space for the glow */
+      animation: burnGlow 1.8s infinite ease-in-out;
+    }
+
+    .image-wrapper img {
       width: 100%;
       height: 250px;
       object-fit: cover;
       border-radius: 10px;
-      border: 3px solid rgba(255, 255, 255, 0.7);
-      animation: fadeInUp 1s ease forwards, floatImage 4s ease-in-out infinite, burnGlow 1.8s infinite ease-in-out;
+      display: block;
+      animation: fadeInUp 1s ease forwards,
+                 floatImage 4s ease-in-out infinite;
     }
 
     /* Gold glowing caption */
@@ -112,7 +121,7 @@
       margin-right: auto;
       text-align: center;
       line-height: 1.5;
-      color: #FFD700; /* Gold color */
+      color: #FFD700;
       animation: fadeGlow 3s ease-in-out forwards;
     }
 
@@ -140,21 +149,21 @@
 <body>
   <h1>My Hobbies Gallery</h1>
   <div class="gallery">
-    <img src="page2.jpg" alt="Hobby Photo 1">
-    <img src="page3.jpg" alt="Hobby Photo 2">
-    <img src="page4.jpg" alt="Hobby Photo 3">
-    <img src="page5.jpg" alt="Hobby Photo 4">
-    <img src="page6.jpg" alt="Hobby Photo 5">
-    <img src="page7.jpg" alt="Hobby Photo 6">
-    <img src="page8.jpg" alt="Hobby Photo 7">
-    <img src="page9.jpg" alt="Hobby Photo 8">
-    <img src="page10.jpg" alt="Hobby Photo 9">
-    <img src="page11.jpg" alt="Hobby Photo 10">
-    <img src="page12.jpg" alt="Hobby Photo 11">
-    <img src="page13.jpg" alt="Hobby Photo 12">
+    <div class="image-wrapper"><img src="page2.jpg" alt="Hobby Photo 1"></div>
+    <div class="image-wrapper"><img src="page3.jpg" alt="Hobby Photo 2"></div>
+    <div class="image-wrapper"><img src="page4.jpg" alt="Hobby Photo 3"></div>
+    <div class="image-wrapper"><img src="page5.jpg" alt="Hobby Photo 4"></div>
+    <div class="image-wrapper"><img src="page6.jpg" alt="Hobby Photo 5"></div>
+    <div class="image-wrapper"><img src="page7.jpg" alt="Hobby Photo 6"></div>
+    <div class="image-wrapper"><img src="page8.jpg" alt="Hobby Photo 7"></div>
+    <div class="image-wrapper"><img src="page9.jpg" alt="Hobby Photo 8"></div>
+    <div class="image-wrapper"><img src="page10.jpg" alt="Hobby Photo 9"></div>
+    <div class="image-wrapper"><img src="page11.jpg" alt="Hobby Photo 10"></div>
+    <div class="image-wrapper"><img src="page12.jpg" alt="Hobby Photo 11"></div>
+    <div class="image-wrapper"><img src="page13.jpg" alt="Hobby Photo 12"></div>
   </div>
 
-  <!-- Explanation at the bottom -->
+  <!-- Caption -->
   <div class="caption">
     I play basketball and Mobile Legends to relieve stress. These activities help me clear my mind and focus on something I enjoy. Basketball keeps me active and energized, while Mobile Legends challenges my strategic thinking. Together, they give me the perfect balance of physical and mental relaxation.
   </div>
@@ -162,6 +171,8 @@
   <a href="index.html" class="back">← Back to Home</a>
 </body>
 </html>
+
+
 
 
 
